@@ -21,7 +21,7 @@ if __name__ == "__main__":
 
         print("---------Archivo---------")
         dom=input("Ingrese un dominio a buscar: ")
-        archivo=open("C:/Users/Montion/Desktop/Facultad/POO/Unidad 2/Repositorio/Ejercicio1/Listado.csv")
+        archivo=open("Listado.csv")
         reader=csv.reader(archivo,delimiter=',')
         cont=0
         for i in reader:
