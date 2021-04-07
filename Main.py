@@ -1,5 +1,6 @@
 from ClaseEmail import Email
-import csv
+from ManejadorEmail import ManejadorEmail
+
 if __name__ == "__main__":
     E=Email()
     nombre=input("Ingrese su nombre ")
@@ -21,19 +22,13 @@ if __name__ == "__main__":
 
         print("---------Archivo---------")
         dom=input("Ingrese un dominio a buscar: ")
-        archivo=open("Listado.csv")
-        reader=csv.reader(archivo,delimiter=',')
-        cont=0
-        for i in reader:
-            for j in range(10):
-                E.CrearCuenta(i[j])
-                dom2=str(E.getdominio())
-                if dom2 == dom:
-                    cont+=1
+        M=ManejadorEmail()
+        M.CargarLista()
+        M.BuscarDominio(dom)
         
-        print("La cantidad de cuentas con el dominio {} es de: {}".format(dom,cont))
             
-        archivo.close()
+        
     else:
         print("Datos incorrectos")
+    
     
