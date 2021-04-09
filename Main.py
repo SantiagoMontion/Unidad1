@@ -1,34 +1,34 @@
-from ClaseEmail import Email
-from ManejadorEmail import ManejadorEmail
+from ManejadorViajeros import Manejador
 
-if __name__ == "__main__":
-    E=Email()
-    nombre=input("Ingrese su nombre ")
-    email=input("Ingrese su email ")
+def menu():
+    print("\na- Consultar Cantidad de Millas.\n")
+    print("b- Acumular Millas.\n")
+    print("c- Canjear Millas.\n")
+    op=input("Seleccione una opcion: ")
+    return op
 
-    bandera=E.CrearCuenta(email)
-    if bandera==True:
-        print("Estimado {} te enviaremos tus mensajes a la direccion {}".format(nombre,E.RetornaEmail()))
-        print("----------Modificar Contraseña---------")
-        contraactual=input("Ingrese su contraseña actual ")
-        E.ChequearContra(contraactual)
+if __name__=='__main__':
+    M=Manejador()
+    M.CargarLista()
 
-        print("----------Test----------")
-        test=Email()
-        test.CrearCuenta("informatica.fcefn@gmail.com")
-        test.CrearCuenta("wicc2019@unsj-cuim.edu")
-        test.CrearCuenta("juan1957@yahoo.com")
-    
+    num=int(input("Ingrese un numero de viajero frecuente "))
 
-        print("---------Archivo---------")
-        dom=input("Ingrese un dominio a buscar: ")
-        M=ManejadorEmail()
-        M.CargarLista()
-        M.BuscarDominio(dom)
+    while num!=0:
+        opcion=str(menu()).lower()
         
-            
+        if opcion=='a':
+            print("La Cantidad de Millas es: {}".format(M.ConsultaMillas(num)))
+
+        elif opcion=='b':
+            millas=int(input("Ingrese La cantidad de millas para acumular "))
+            M.Acumular(num,millas)
+
+        elif opcion =='c':
+            millas=int(input("Ingrese La cantidad de millas para canjear "))
+            M.Canjear(num,millas)
         
-    else:
-        print("Datos incorrectos")
-    
-    
+        else:
+            print("Opcion inocrrecta\n")
+
+        
+        num=int(input("\nIngrese otro numero o 0 para finalizar "))
