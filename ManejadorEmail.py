@@ -9,7 +9,7 @@ class ManejadorEmail:
 
 
     def CargarLista(self):
-        archivo=open("C:/Users/Montion/Desktop/Facultad/POO/Unidad2/Repositorio/Ejercicio1/Listado.csv")
+        archivo=open("Listado.csv")
         reader=csv.reader(archivo,delimiter=',')
         
         for fila in reader:
