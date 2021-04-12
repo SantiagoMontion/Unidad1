@@ -1,3 +1,4 @@
+import re
 class Email:
     __IdCuenta=""
     __Dominio=""
@@ -21,8 +22,8 @@ class Email:
 
 
     def CrearCuenta(self,correo):
-        if type(correo)==str:
-            try:
+        try:
+            if re.match('^[(a-z0-9\_\-\.)]+@[(a-z0-9\_\-\.)]+\.[(a-z)]{2,15}$',correo.lower()):
                 separado=correo.split("@")
                 id=separado[0]
                 sep2=separado[1].split(".")
@@ -31,8 +32,13 @@ class Email:
                 self.__init__(id,dominio,tipo)
                 print("\n--Cuenta Registrada con Exito!--\n")
                 return True
-            except IndexError:
-                return False
+
+
+            else:
+	            print ("Correo incorrecto")
+                
+        except IndexError:
+            return False
 
     
     def ChequearContra(self,contra):
