@@ -10,7 +10,7 @@ class Manejador:
 
 
     def CargarLista(self):
-        archivo=open("C:/Users/Montion/Desktop/Facultad/POO/Unidad2/Repositorio/Ejercicio2/Lista.csv")
+        archivo=open("Lista.csv")
         reader=csv.reader(archivo,delimiter=',')
         for fila in reader:
             V=ViajeroFrecuente(fila[0],fila[1],fila[2],fila[3],fila[4])
