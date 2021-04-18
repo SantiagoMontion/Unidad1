@@ -9,7 +9,7 @@ class ManejadorCamiones:
 
 
     def CargarCamiones(self):
-        archivo=open("C:/Users/Montion/Desktop/Facultad/POO/Unidad2/Repositorio/Ejercicio3/Camiones.csv")
+        archivo=open("Camiones.csv")
         reader=csv.reader(archivo,delimiter=',')
         for fila in reader:
             C=Camion(fila[0],fila[1],fila[2],fila[3],fila[4])
