@@ -14,7 +14,7 @@ class Cosecha:
 
     
     def CargarCosechas(self):
-        archivo=open("C:/Users/Montion/Desktop/Facultad/POO/Unidad2/Repositorio/Ejercicio3/Cosechas.csv")
+        archivo=open("Cosechas.csv")
         reader=csv.reader(archivo,delimiter=',')
 
         for fila in reader:
