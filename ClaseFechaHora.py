@@ -60,21 +60,43 @@ class FechaHora:
             self.__hora=0
 
 
+        if self.__anio==0:
+            self.__anio=1
+            self.__mes=1
+
+        if self.__mes==0:
+            self.__anio-=1
+            self.__mes=1
+
+        if self.__dia==0:
+            self.__mes-=1
+            self.__dia=1
+
+        if self.__hora==0:
+            self.__dia-=1
+            self.__hora=0
+
+        if self.__min==0:
+            self.__hora-=1
+            self.__min=0
+
+        if self.__seg==0:
+            self.__min-=1
+            self.__seg=0
+
 
 #divisible por 4, y si es divisible por 100, debe ser divisible por 400
         if self.__anio%4==0 and self.__anio%100!=0:
             #Año bisiesto
             
             if self.__mes==2 and self.__dia>29:
-                print("ACA")
-                print(self.__dia)
                 self.__dia=1
                 self.__mes+=1
         elif self.__anio%100==0 and self.__anio%400 ==0:
             #Año bisiesto
             
             if self.__mes==2 and self.__dia>29:
-                print("ACA NO")
+                
                 self.__dia=1
                 self.__mes+=1
 
@@ -99,6 +121,10 @@ class FechaHora:
                 if self.__mes>12:
                     self.__mes=1
                     self.__anio+=1
+
+
+            
+
 
 
 
