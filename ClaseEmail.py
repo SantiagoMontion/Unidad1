@@ -22,23 +22,23 @@ class Email:
 
 
     def CrearCuenta(self,correo):
-        try:
-            if re.match('^[(a-z0-9\_\-\.)]+@[(a-z0-9\_\-\.)]+\.[(a-z)]{2,15}$',correo.lower()):
-                separado=correo.split("@")
-                id=separado[0]
-                sep2=separado[1].split(".")
-                dominio=sep2[0]
-                tipo=sep2[1]
-                self.__init__(id,dominio,tipo)
-                print("\n--Cuenta Registrada con Exito!--\n")
-                return True
+        
+        if re.match('^[(a-z0-9\_\-\.)]+@[(a-z0-9\_\-\.)]+\.[(a-z)]{2,15}$',correo.lower()):
+            separado=correo.split("@")
+            id=separado[0]
+            sep2=separado[1].split(".")
+            dominio=sep2[0]
+            tipo=sep2[1]
+            self.__init__(id,dominio,tipo)
+            print("\n--Cuenta Registrada con Exito!--\n")
+            return True
+            
 
 
-            else:
-	            print ("Correo incorrecto")
+        else:
+	        print ("Correo incorrecto")
+
                 
-        except IndexError:
-            return False
 
     
     def ChequearContra(self,contra):
