@@ -5,7 +5,7 @@ if __name__ == "__main__":
     E=Email()
     nombre=input("Ingrese su nombre ")
     email=input("Ingrese su email ")
-
+    
     bandera=E.CrearCuenta(email)
     if bandera==True:
         print("Estimado {} te enviaremos tus mensajes a la direccion {}".format(nombre,E.RetornaEmail()))
@@ -23,12 +23,9 @@ if __name__ == "__main__":
         print("---------Archivo---------")
         dom=input("Ingrese un dominio a buscar: ")
         M=ManejadorEmail()
-        M.CargarLista()
         M.BuscarDominio(dom)
         
             
-        
-    else:
-        print("Datos incorrectos")
+    
     
     
