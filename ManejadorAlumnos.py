@@ -4,7 +4,7 @@ class Manejador:
     __lista=[]
 
     def __init__(self):
-        archivo=open("C:/Users/Montion/Desktop/Facultad/POO/Unidad2/Repositorio/Ejercicio5/listadoalumnos.csv")
+        archivo=open("listadoalumnos.csv")
         reader=csv.reader(archivo,delimiter=",")
         
         for fila in reader:
