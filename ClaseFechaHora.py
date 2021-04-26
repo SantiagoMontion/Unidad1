@@ -26,21 +26,22 @@ class FechaHora:
 
 
     def PonerEnHora(self,Hora,min=0,seg=0):
-        try:
-            self.__hora=int(Hora)
-            self.__min=int(min)
-            self.__seg=int(seg)
-        except:
+        if type(Hora)==int and type(min)==int and type(seg)==int:
+            self.__hora=Hora
+            self.__min=min
+            self.__seg=seg
+
+        else:
             print("Datos Incorrectos\n")
 
 
     def AdelantarHora(self,hora,min=0):
-        try:
+        if type(hora)==int and type(min)==int:
             self.__hora+=int(hora)
             self.__min+=int(min)
             self.check()
            
-        except:
+        else:
             print("Datos Incorrectos\n")
 
 
