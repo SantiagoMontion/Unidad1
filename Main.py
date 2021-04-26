@@ -65,12 +65,9 @@ if __name__ == '__main__':
     input()
 
     r1.AdelantarHora(1,15) #sumar 1 hora y 15 minutos a la hora actual
-
+    
     r1.Mostrar()
 
-    input()
-
-    r2.AdelantarHora(5,10)
 
     print("-----Test-----")
     test()
