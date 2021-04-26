@@ -17,9 +17,12 @@ class Manejador:
     def Listar(self,anio,div):
         print("{}{}".format("Alumno".ljust(24),"Porcentaje".center(14)))
         for i in range(len(self.__lista)):
-            if int(self.__lista[i].getinasist())>int(self.__lista[i].getcantmaxinasist()):
+            if int(self.__lista[i].getinasist())>int(self.__lista[i].getcantmaxinasist()) and str(self.__lista[i].getdivision()) == str(div) and str(self.__lista[i].getanio()) == str(anio):
                 porcentaje=(int(self.__lista[i].getinasist())*100)/self.__lista[i].getcantmaxinasist()
                 print("{}{:.2f}%".format(str(self.__lista[i].getnombre()).ljust(24),float(porcentaje)))
+            
+            else:
+                print("\nNingun alumno cumple las condiciones")
 
 
     def Modificarinasistencias(self):
