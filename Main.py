@@ -12,7 +12,7 @@ if __name__=='__main__':
     Opciones()
 
     op=int(input("\nSeleccione un opcion: (0 para salir)" ))
-    while op!='0':
+    while op!=0:
         os.system('cls')
         Menu.opcion(op)
         Opciones()
