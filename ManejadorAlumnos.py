@@ -4,7 +4,7 @@ class Manejador:
     __lista=[]
 
     def __init__(self):
-        archivo=open("listadoalumnos.csv")
+        archivo=open("C:/Users/Montion/Desktop/Facultad/POO/Unidad2/Repositorio/Ejercicio5/listadoalumnos.csv")
         reader=csv.reader(archivo,delimiter=",")
         
         for fila in reader:
@@ -16,13 +16,16 @@ class Manejador:
 
     def Listar(self,anio,div):
         print("{}{}".format("Alumno".ljust(24),"Porcentaje".center(14)))
+        
         for i in range(len(self.__lista)):
-            if int(self.__lista[i].getinasist())>int(self.__lista[i].getcantmaxinasist()) and str(self.__lista[i].getdivision()) == str(div) and str(self.__lista[i].getanio()) == str(anio):
-                porcentaje=(int(self.__lista[i].getinasist())*100)/self.__lista[i].getcantmaxinasist()
-                print("{}{:.2f}%".format(str(self.__lista[i].getnombre()).ljust(24),float(porcentaje)))
+            if str(self.__lista[i].getdivision()) == str(div) and int(self.__lista[i].getanio()) == anio:
+                if int(self.__lista[i].getinasist())>int(self.__lista[i].getcantmaxinasist()):
+                    porcentaje=(int(self.__lista[i].getinasist())*100)/self.__lista[i].getcantmaxinasist()
+                    print("{}{:.2f}%".format(str(self.__lista[i].getnombre()).ljust(24),float(porcentaje)))
+                    
             
-            else:
-                print("\nNingun alumno cumple las condiciones")
+                else:
+                    print("\nNingun alumno cumple las condiciones")
 
 
     def Modificarinasistencias(self):
