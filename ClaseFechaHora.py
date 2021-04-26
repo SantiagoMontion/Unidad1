@@ -34,12 +34,12 @@ class FechaHora:
             print("Datos Incorrectos\n")
 
 
-    def AdelantarHora(self,hora,seg=0):
+    def AdelantarHora(self,hora,min=0):
         try:
             self.__hora+=int(hora)
-            self.__seg+=int(seg)
+            self.__min+=int(min)
             self.check()
-
+           
         except:
             print("Datos Incorrectos\n")
 
