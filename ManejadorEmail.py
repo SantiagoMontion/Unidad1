@@ -10,7 +10,7 @@ class ManejadorEmail:
 
 
     def CargarLista(self):
-        archivo=open("Listado.csv")
+        archivo=open("C:/Users/Montion/Desktop/Facultad/POO/Unidad2/Repositorio/Ejercicio1/Listado.csv")
         reader=csv.reader(archivo,delimiter=',')
         for fila in reader:
             for j in range(10):
@@ -39,4 +39,3 @@ class ManejadorEmail:
                 cont+=1
 
         print("La cantidad de cuentas con el dominio {} es de: {}".format(dom,cont))
-
