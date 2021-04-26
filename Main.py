@@ -16,7 +16,7 @@ if __name__ == "__main__":
         print("----------Test----------")
         test=Email()
         test.CrearCuenta("informatica.fcefn@gmail.com")
-        test.CrearCuenta("wicc2019@unsj-cuim.edu")
+        test.CrearCuenta("wicc2019unsj-cuim.edu")
         test.CrearCuenta("juan1957@yahoo.com")
     
 
