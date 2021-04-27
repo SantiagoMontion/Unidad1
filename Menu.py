@@ -1,4 +1,4 @@
-import os
+
 
 from ManejadorViajeros import Manejador
 
@@ -27,16 +27,20 @@ class Menu:
         print('Salir')
 
     def opcion1(self,num):
-        
-        print("La Cantidad de Millas es: {}".format(self.__M.ConsultaMillas(num)))
+        if type(num)==int:
+            print("La Cantidad de Millas es: {}".format(self.__M.ConsultaMillas(num)))
 
     def opcion2(self,num):
-        millas=int(input("Ingrese La cantidad de millas para acumular "))
-        self.__M.Acumular(num,millas)
+        if type(num)==int:
+            millas=int(input("Ingrese La cantidad de millas para acumular "))
+            self.__M.Acumular(num,millas)
 
     def opcion3(self,num):
-        millas=int(input("Ingrese La cantidad de millas para canjear "))
-        self.__M.Canjear(num,millas)
+        if type(num)==int:
+            millas=int(input("Ingrese La cantidad de millas para canjear "))
+            self.__M.Canjear(num,millas)
+
+
     
 
 
