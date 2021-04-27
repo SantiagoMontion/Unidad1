@@ -8,15 +8,15 @@ class FechaHora:
 
 
     def __init__(self,dia=1,mes=1,anio=2020,hora=0,min=0,seg=0):
-        try:
-            self.__dia=int(dia)
-            self.__mes=int(mes)
-            self.__anio=int(anio)
-            self.__hora=int(hora)
-            self.__min=int(min)
-            self.__seg=int(seg)
+        if type(dia)==int and type(mes)==int and type(anio)==int and type(hora)==int and type(min)==int and type(seg)==int:
+            self.__dia=dia
+            self.__mes=mes
+            self.__anio=anio
+            self.__hora=hora
+            self.__min=min
+            self.__seg=seg
             self.check()
-        except:
+        else:
             print("Datos Incorrectos\n")
 
 
