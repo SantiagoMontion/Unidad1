@@ -74,5 +74,14 @@ class Conjunto:
         return bandera
 
 
+
+    def Cargarporparametros(self,listado):
+        for i in range(len(listado)):
+            bandera=self.Controlar(listado[i])
+            if  not bandera:
+                self.__lista.append(listado[i])
+            else:
+                print("\nElemento repetido en el conjunto")
+
     
         
