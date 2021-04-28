@@ -8,7 +8,10 @@ def opciones():
     print("\n3- Verificar si dos conjuntos son iguales")
     op=int(input("\nSeleccione una opcion (0 para salir): "))
     return op
-    
+
+
+def test(Menu):
+    Menu.Test()
 
 if __name__ == '__main__':
     Menu=Menu()
@@ -26,3 +29,5 @@ if __name__ == '__main__':
         else:
             print("Opcion Incorrecta")
             op=opciones()
+
+    test(Menu)
