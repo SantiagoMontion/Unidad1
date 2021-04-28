@@ -13,12 +13,15 @@ class Manejador:
         archivo=open("Lista.csv")
         reader=csv.reader(archivo,delimiter=',')
         for fila in reader:
-            V=ViajeroFrecuente(fila[0],fila[1],fila[2],fila[3],fila[4])
-            self.__lista.append(V)
+            if fila[0].isdigit()==True and fila[1].isdigit()==True and type(fila[2])==str and type(fila[3])==str and fila[4].isdigit()==True:
+                V=ViajeroFrecuente(fila[0],fila[1],fila[2],fila[3],fila[4])
+                self.__lista.append(V)
+            else:
+                print("\nDatos incorrectos")
 
 
     def ConsultaMillas(self,i):
-        if i-1 <=len(self.__lista):
+        if i <=len(self.__lista):
             return self.__lista[i-1].CantMillasAcum()
         else:
             print("\nEl viajero ingresado no se encuentra registrado")
