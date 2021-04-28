@@ -1,6 +1,11 @@
 import os
 from Menu import Menu
 
+def test(num,o1,o2,o3,Menu):
+
+    Menu.opcion(o1,num)
+    Menu.opcion(o2,num)
+    Menu.opcion(o3,num)
 
 if __name__=='__main__':
     Menu=Menu()
@@ -14,7 +19,11 @@ if __name__=='__main__':
         op=str(input("Seleccione una opcion: ")).lower()
         os.system('cls')
         Menu.opcion(op,num)
-        
 
         
         num=int(input("\nIngrese otro numero o 0 para finalizar "))
+
+    test(5,'a','b','c',Menu)
+
+
+   
