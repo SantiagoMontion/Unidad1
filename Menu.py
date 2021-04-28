@@ -60,8 +60,31 @@ class Menu:
         f1,f2=self.formulario()
         mayor=f1>f2
         print("-----Resultado-----")
+        print("\nLa fecha mayor es:  ")
+        mayor.Mostrar()
         
-        print("\nLa fecha mayor es {} ".format(mayor.Mostrar()))
+
+
+
+    def Test(self):
+        f1=FechaHora(1,1,1,1,1,60)
+        f2=FechaHora(5,6,2020,1,0,0)
+        suma=f1+f2
+        suma.check()
+        print("-----Resultado-----")
+        suma.Mostrar()   #6,7,2021,1,2,0
+
+        resta=f1 - f2
+        resta.check()
+        print("-----Resultado-----")
+        resta.Mostrar()
+
+        mayor=f1>f2
+        print("-----Resultado-----")
+        print("\nLa fecha mayor es:  ")
+        mayor.Mostrar()
+
+
 
 
 
