@@ -26,8 +26,7 @@ class ManejadorProyecto:
 
             id=self.__lista[i].getid()
             cont=MI.Contador(id)
-
-            if int(cont)>=3:
+            if cont>=3:
                 self.__lista[i].CargarPuntos(10)
 
             elif int(cont)<3:
@@ -88,3 +87,6 @@ class ManejadorProyecto:
                     self.__lista[j]=aux
 
 
+    def CargarTest(self):
+        P=Proyecto('1TEST','Taller de Algoritmos','Programacion basica')
+        self.__lista.append(P)
