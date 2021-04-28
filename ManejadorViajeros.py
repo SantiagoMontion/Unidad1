@@ -18,10 +18,21 @@ class Manejador:
 
 
     def ConsultaMillas(self,i):
-        return self.__lista[i-1].CantMillasAcum()
+        if i-1 <=len(self.__lista):
+            return self.__lista[i-1].CantMillasAcum()
+        else:
+            print("\nEl viajero ingresado no se encuentra registrado")
 
     def Acumular(self,i,millas):
-        self.__lista[i-1].AcumularMillas(millas)
+        if i-1 <=len(self.__lista):
+            self.__lista[i-1].AcumularMillas(millas)
+        else:
+            print("\nEl viajero ingresado no se encuentra registrado")
 
     def Canjear(self,i,millas):
-        self.__lista[i-1].CanjearMillas(millas)
+        if i-1 <=len(self.__lista):
+            self.__lista[i-1].CanjearMillas(millas)
+        else:
+            print("\nEl viajero ingresado no se encuentra registrado")
+        
+        
