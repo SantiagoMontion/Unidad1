@@ -8,11 +8,12 @@ class Camion:
 
 
     def __init__(self,id,nc,pat,marca,tara):
-        self.__id=id
-        self.__nombreconductor=nc
-        self.__patente=pat
-        self.__marca=marca
-        self.__tara=tara
+        if id.isdigit()==True:
+            self.__id=id
+            self.__nombreconductor=nc
+            self.__patente=pat
+            self.__marca=marca
+            self.__tara=tara
 
 
     def gettara(self):
