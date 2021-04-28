@@ -44,13 +44,23 @@ class Menu:
 
 
 
-        
+    def Test(self):
+        print("-----TEST-----")
+        C1=Conjunto()
+        C2=Conjunto()
+        C1.Cargarporparametros([1,5,6,8])
+        C2.Cargarporparametros([1,2,3,4,7])
 
-        
+        union = C1 + C2
+        print("\nla Union es: {}".format(union))
+
+        Diferencia= C1 - C2
+        print("\nLa diferencia es: {}".format(Diferencia))
+
+        igualdad= C1 == C2
+        if igualdad:
+            print("\nLos Cojuntos son iguales")
+        else:
+            print("\nLos Conjuntos son diferentes")
 
 
-
-        
-
-
-            
