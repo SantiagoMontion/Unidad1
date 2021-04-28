@@ -18,23 +18,25 @@ class Cosecha:
         reader=csv.reader(archivo,delimiter=',')
 
         for fila in reader:
-            self.__lista[int(fila[0])-1][int(fila[1])-1]=float(fila[2])
+            if fila[0].isdigit()==True and fila[1].isdigit()==True:
+                self.__lista[int(fila[0])-1][int(fila[1])-1]=float(fila[2])
         
 
 
     def Obtenerkilosdescargados(self,i):
-        
         self.__M.CargarCamiones()
+        
         tara=float(self.__M.getpesovacio(i))
         kilos=0.0
         for j in range(45):
             kilos+=self.__lista[i][j]
         return kilos-tara
+        
 
 
     def guardarenarchivo(self,id,dia,peso):
         datos=str(id)+","+str(dia)+","+str(peso)+"\n"
-        archivo=open("C:/Users/Montion/Desktop/Facultad/POO/Unidad2/Repositorio/Ejercicio3/Cosechas.csv",'a')
+        archivo=open("Cosechas.csv",'a')
         archivo.write(datos)
 
 
@@ -45,6 +47,7 @@ class Cosecha:
         for i in range(20):
 
             print("{}{}{}".format(self.__M.getpatente(i).ljust(10),self.__M.getnombre(i).center(30),str(self.__lista[i][dia]).rjust(15)))
+
             
 
         
