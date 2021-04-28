@@ -8,9 +8,10 @@ class Hora:
 
 
     def __init__(self,hora,min,seg):
-        self.__hora=hora
-        self.__min=min
-        self.__seg=seg
+        if type(hora)==int and type(min)==int and type(seg)==int:
+            self.__hora=hora
+            self.__min=min
+            self.__seg=seg
 
 
 
