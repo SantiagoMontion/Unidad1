@@ -12,17 +12,26 @@ class ManejadorCamiones:
         archivo=open("Camiones.csv")
         reader=csv.reader(archivo,delimiter=',')
         for fila in reader:
-            C=Camion(fila[0],fila[1],fila[2],fila[3],fila[4])
-            self.__lista.append(C)
+            if fila[0].isdigit()==True and fila[4].isdigit()==True:
+                C=Camion(fila[0],fila[1],fila[2],fila[3],fila[4])
+                self.__lista.append(C)
+            
 
         archivo.close()
 
 
     def getpesovacio(self,id):
-        return self.__lista[id].gettara()
+        if id<len(self.__lista):
+            return self.__lista[id].gettara()
+        else:
+            print("Camion no registrado")
 
     def getpatente(self,i):
-        return self.__lista[i].getpatente()
+        if i<len(self.__lista):
+            return self.__lista[i].getpatente()
 
     def getnombre(self,i):
-        return self.__lista[i].getnombre()
+        if i<len(self.__lista):
+            return self.__lista[i].getnombre()
+        else:
+            print("Camion no registrado")
