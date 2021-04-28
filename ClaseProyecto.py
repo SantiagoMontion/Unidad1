@@ -23,7 +23,8 @@ class Proyecto:
         return self.__palabrasclave
 
     def CargarPuntos(self,pts):
-        self.__puntos+=pts
+        if type(pts)==int:
+            self.__puntos+=pts
 
     def getpuntos(self):
         return self.__puntos
