@@ -8,9 +8,9 @@ class Manejador:
         reader=csv.reader(archivo,delimiter=",")
         
         for fila in reader:
-
-            A=Alumno(fila[0],fila[1],fila[2],fila[3])
-            self.__lista.append(A)
+            if fila[1].isdigit()==True and fila[3].isdigit()==True:
+                A=Alumno(fila[0],fila[1],fila[2],fila[3])
+                self.__lista.append(A)
 
         archivo.close()
 
