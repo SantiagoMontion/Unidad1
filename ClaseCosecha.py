@@ -45,8 +45,8 @@ class Cosecha:
         kilos=0.0
         print("{}{}{}".format("PATENTE".ljust(10),"CONDUCTOR".center(30),"CANTIDAD DE KILOS".rjust(15)))
         for i in range(20):
-
-            print("{}{}{}".format(self.__M.getpatente(i).ljust(10),self.__M.getnombre(i).center(30),str(self.__lista[i][dia]).rjust(15)))
+            if self.__lista[i][dia]!=0:
+                print("{}{}{}".format(self.__M.getpatente(i).ljust(10),self.__M.getnombre(i).center(30),str(self.__lista[i][dia]).rjust(15)))
 
             
 
