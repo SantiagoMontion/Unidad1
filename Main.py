@@ -60,4 +60,19 @@ if __name__ == '__main__':
    f4 = 1 + f2 # suma un día a un objeto FechaHora
    f4.check()
    
-   input() 
+   input()
+
+
+
+   print("\n----TEST---")
+
+   
+   ftest = FechaHora(28,2,2020,0, 1, 0)
+
+   rtest = Hora(23, 59, 0)
+
+   suma=ftest + rtest
+
+   suma.Mostrar()  #29/2/2020 0.0.0
+
+   
