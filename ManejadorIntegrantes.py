@@ -8,7 +8,7 @@ class ManejadorIntegrantes:
         self.__lista=[]
 
     def CargarIntegrantes(self):
-        archivo=open("integrantesProyecto.csv")
+        archivo=open("C:/Users/Montion/Desktop/Facultad/POO/Unidad2/Repositorio/EjercicioIntegrador/integrantesProyecto.csv")
         reader=csv.reader(archivo,delimiter=';')
 
         for fila in reader:
@@ -35,9 +35,8 @@ class ManejadorIntegrantes:
         if type(id)==str:
             
             for i in range(len(self.__lista)):
-                if self.__lista[i].getrol()== 'director' and director==False:
+                if self.__lista[i].getid() == id and self.__lista[i].getrol()== 'director':
                     director=True
-                if self.__lista[i].getid() == id and self.__lista[i].getrol()== 'director' and bandera==False:
                     if self.__lista[i].getcategoria()== 'I' or self.__lista[i].getcategoria()=='II':
                         bandera=True
 
@@ -49,12 +48,9 @@ class ManejadorIntegrantes:
         codirector=False
         if type(id)==str:
             
-            for i in range(len(self.__lista)):
-                if self.__lista[i].getrol()== 'director' and codirector==False:
+            for i in range(len(self.__lista)):   
+                if self.__lista[i].getid() == id and self.__lista[i].getrol()== 'codirector':
                     codirector=True
-
-        
-                if self.__lista[i].getid() == id and self.__lista[i].getrol()== 'codirector' and bandera==False:
                     if self.__lista[i].getcategoria()== 'I' or self.__lista[i].getcategoria()=='II' or self.__lista[i].getcategoria()=='III':
                         bandera=True
 
