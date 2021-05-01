@@ -9,7 +9,7 @@ class ManejadorProyecto:
 
 
     def CargarProyectos(self):
-        archivo=open("C:/Users/Montion/Desktop/Facultad/POO/Unidad2/Repositorio/EjercicioIntegrador/proyectos.csv")
+        archivo=open("proyectos.csv")
         
         reader=csv.reader(archivo,delimiter=';')
 
