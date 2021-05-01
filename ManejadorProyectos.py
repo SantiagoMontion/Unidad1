@@ -9,7 +9,7 @@ class ManejadorProyecto:
 
 
     def CargarProyectos(self):
-        archivo=open("proyectos.csv")
+        archivo=open("C:/Users/Montion/Desktop/Facultad/POO/Unidad2/Repositorio/EjercicioIntegrador/proyectos.csv")
         
         reader=csv.reader(archivo,delimiter=';')
 
@@ -63,7 +63,9 @@ class ManejadorProyecto:
 
 
     def MostrarPuntos(self):
-        self.ordenar()
+        
+        self.__lista.sort(key=lambda x:x.getpuntos(),reverse=True)
+        
         for i in range(len(self.__lista)):
             print("\nPosición {}".format(i+1))
             print("\nTitulo: {}    \nPuntos: {}".format(self.__lista[i].gettitulo(),self.__lista[i].getpuntos()))
@@ -71,20 +73,6 @@ class ManejadorProyecto:
             print("---------------------------------")
 
 
-
-            
-
-
-    def ordenar(self):
-        for i in range(len(self.__lista)):
-            
-            for j in range(i+1,len(self.__lista)):
-
-                if self.__lista[j]>self.__lista[i]:
-                    
-                    aux=self.__lista[i]
-                    self.__lista[i]=self.__lista[j]
-                    self.__lista[j]=aux
 
 
     def CargarTest(self):
