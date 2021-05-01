@@ -8,7 +8,7 @@ class ManejadorIntegrantes:
         self.__lista=[]
 
     def CargarIntegrantes(self):
-        archivo=open("C:/Users/Montion/Desktop/Facultad/POO/Unidad2/Repositorio/EjercicioIntegrador/integrantesProyecto.csv")
+        archivo=open("integrantesProyecto.csv")
         reader=csv.reader(archivo,delimiter=';')
 
         for fila in reader:
